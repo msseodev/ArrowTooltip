@@ -11,6 +11,13 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 
+/**
+ * Data class representing the shape of the tooltip, including the corner radius, arrow size, and arrow position.
+ *
+ * @property cornerRadius The radius of the corners of the tooltip.
+ * @property arrowSize The size of the arrow.
+ * @property arrowPosition The position of the arrow relative to the tooltip.
+ */
 data class TooltipShape(
     val cornerRadius: Dp = 12.dp,
     val arrowSize: Dp = 8.dp,

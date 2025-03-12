@@ -14,6 +14,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 
+/**
+ * A composable function that displays a tooltip with an arrow pointing to the anchor element.
+ *
+ * @param modifier The modifier to be applied to the Box containing the tooltip and content.
+ * @param visible A boolean indicating whether the tooltip is visible.
+ * @param properties The properties for configuring the tooltip's behavior and appearance.
+ * @param tooltipContainerColor The background color of the tooltip container.
+ * @param tooltipContent The composable content to be displayed inside the tooltip.
+ * @param content The composable content to be displayed as the anchor element.
+ */
 @Composable
 fun ArrowTooltip(
     modifier: Modifier = Modifier,
