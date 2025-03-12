@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArrowTooltip</string>
+    <string name="header">Android King</string>
+
+    <string name="long_text">
+        Android King is a blog for Android developers.
+        It provides tutorials and tips for Android development.
+        It also provides free source code for Android developers.
+
+    </string>
+</resources>
