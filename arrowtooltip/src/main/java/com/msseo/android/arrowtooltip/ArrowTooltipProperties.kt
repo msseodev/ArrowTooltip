@@ -42,6 +42,9 @@ internal fun ArrowTooltipProperties.toPopupProperties(): PopupProperties =
 
 /**
  * Defines possible alignments of the tooltip relative to the anchor.
+ *
+ * When the tooltip is positioned to the right or left of the anchor, 'Start' refers to the top of the anchor along the Y-axis.
+ * If the tooltip is below or above the anchor, 'Start' refers to the left of the anchor along the X-axis, and so on, relative to the tooltip's position.
  */
 enum class ArrowTooltipAlignment {
     /**
