@@ -24,7 +24,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -42,7 +41,6 @@ import com.msseo.android.arrowtooltip.ArrowTooltipAlignment
 import com.msseo.android.arrowtooltip.ArrowTooltipProperties
 import com.msseo.android.arrowtooltip.TooltipShape
 import com.msseo.android.tooltip.ui.theme.ArrowTooltipTheme
-import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,18 +49,6 @@ fun TooltipScreen() {
     var largeTooltipVisible by remember { mutableStateOf(false) }
     var profileTooltipPosition by remember { mutableStateOf(TooltipShape.ArrowPosition.Bottom) }
     var tooltipAlignment by remember { mutableStateOf(ArrowTooltipAlignment.AnchorCenter) }
-
-    LaunchedEffect(profileTooltipVisible) {
-        while(profileTooltipVisible) {
-            delay(2000)
-            profileTooltipPosition = when(profileTooltipPosition) {
-                TooltipShape.ArrowPosition.Bottom -> TooltipShape.ArrowPosition.Left
-                TooltipShape.ArrowPosition.Left -> TooltipShape.ArrowPosition.Top
-                TooltipShape.ArrowPosition.Top -> TooltipShape.ArrowPosition.Right
-                TooltipShape.ArrowPosition.Right -> TooltipShape.ArrowPosition.Bottom
-            }
-        }
-    }
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -138,6 +124,25 @@ fun TooltipScreen() {
                 }
                 Button(onClick = { tooltipAlignment = ArrowTooltipAlignment.AnchorEnd}) {
                     Text(text = "AnchorEnd")
+                }
+            }
+
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                // Arrow is right -> tooltip is left of the anchor!
+                Button(onClick = { profileTooltipPosition = TooltipShape.ArrowPosition.Right }) {
+                    Text(text = "Left")
+                }
+                Button(onClick = { profileTooltipPosition = TooltipShape.ArrowPosition.Left }) {
+                    Text(text = "Right")
+                }
+                Button(onClick = { profileTooltipPosition = TooltipShape.ArrowPosition.Bottom }) {
+                    Text(text = "Top")
+                }
+                Button(onClick = { profileTooltipPosition = TooltipShape.ArrowPosition.Top}) {
+                    Text(text = "Bottom")
                 }
             }
 
