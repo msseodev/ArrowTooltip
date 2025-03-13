@@ -59,12 +59,12 @@ internal class ArrowTooltipShape(
             val verticalArrowXPosition = if(arrowOffset <= 0) {
                 size.width / 2
             } else {
-                arrowOffset.coerceAtLeast(arrow)
+                arrowOffset.coerceIn(minimumValue = arrow, maximumValue = size.width - arrow)
             }
             val horizontalArrowYPosition = if(arrowOffset <= 0) {
                 size.height / 2
             } else {
-                arrowOffset.coerceAtLeast(arrow)
+                arrowOffset.coerceIn(minimumValue = arrow, maximumValue = size.height - arrow)
             }
 
             when (arrowPosition) {
