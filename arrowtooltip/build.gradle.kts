@@ -58,11 +58,11 @@ mavenPublishing {
     coordinates(
         groupId = "io.github.msseodev",
         artifactId = "arrowtooltip",
-        version = "0.0.1"
+        version = "0.0.2"
     )
     pom {
         name.set("ArrowTooltip")
-        description.set("A modernized and sophisticated tooltips, fully customizable with an arrow for Android.")
+        description.set("A simple tooltips with an arrow for Android compose.")
         inceptionYear.set("2025")
         url.set("https://github.com/msseodev/ArrowTooltip")
         licenses {
