@@ -29,7 +29,7 @@ dependencies {
 ```
 
 ## Usage
-You can show or hide the tooltip depending on the value of visible.
+You can show or hide the tooltip depending on the value of ```visible```.
 
 ```kotlin
 @Composable
@@ -50,7 +50,7 @@ fun BasicTooltipExample() {
 ```
 
 ## Tooltip Position and Arrow Shape Settings
-You can customize the tooltip's arrow position and alignment using TooltipShape and ArrowTooltipProperties.
+You can customize the tooltip's arrow position and alignment using ```TooltipShape``` and ```ArrowTooltipProperties```.
 
 ```kotlin
 @Composable
@@ -79,5 +79,5 @@ fun PositionedTooltipExample() {
 ```
 
 > [!NOTE]
-> The ArrowPosition and the tooltip's position are opposite to each other.
-> If ArrowPosition is Top, the tooltip is positioned below the anchor, and if it is Left, the tooltip is positioned to the right of the anchor.
+> The ```ArrowPosition``` and the tooltip's position are opposite to each other.
+> If ```ArrowPosition``` is ```Top```, the tooltip is positioned below the anchor, and if it is ```Left```, the tooltip is positioned to the right of the anchor.
