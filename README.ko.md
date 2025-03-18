@@ -1,16 +1,19 @@
 # ArrowTooltip
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-ArrowTooltip 으로 android compose 에서 말풍선 모양의 툴팁을 구현할 수 있습니다.
+[**English**](https://github.com/msseodev/ArrowTooltip/blob/main/README.md) |
+한국어
+
+ArrowTooltip은 Android Compose 환경에서 말풍선 모양의 툴팁을 간편하게 구현할 수 있도록 도와주는 라이브러리입니다.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/6cd1d8af-b8f3-4436-aa16-4b5c03e179bf" width="450" />
 </p>
 
 ## 주요 기능
-- 간편한 Composable 함수: ArrowTooltip Composable 함수를 사용하여 툴팁을 원하는 UI 요소에 쉽게 추가할 수 있습니다.
-- 화살표 모양 커스터마이징: 툴팁 화살표의 위치 (상, 하, 좌, 우) 및 정렬 (Anchor 시작, 중앙, 끝)을 자유롭게 설정하여 툴팁의 위치를 정밀하게 조정할 수 있습니다.
-- 다양한 스타일 옵션: 툴팁 컨테이너 색상, 둥근 모서리, 화살표 크기, 툴팁과 앵커 사이의 간격 등 다양한 스타일 속성을 커스터마이징하여 앱 디자인에 맞는 툴팁을 만들 수 있습니다.
+- **간편한 Composable 함수**: ArrowTooltip Composable 함수를 사용하여 툴팁을 원하는 UI 요소에 쉽게 추가할 수 있습니다.
+- **화살표 모양 커스터마이징**: 툴팁 화살표의 위치 (상, 하, 좌, 우) 및 정렬 (Anchor 시작, 중앙, 끝)을 자유롭게 설정하여 툴팁의 위치를 정밀하게 조정할 수 있습니다.
+- **다양한 스타일 옵션**: 툴팁 컨테이너 색상, 둥근 모서리, 화살표 크기, 툴팁과 앵커 사이의 간격 등 다양한 스타일 속성을 커스터마이징하여 앱 디자인에 맞는 툴팁을 만들 수 있습니다.
 
 ## 시작하기
 
@@ -21,7 +24,7 @@ dependencies {
 ```
 
 ## 사용 방법
-visible 의 값에 따라 tooltip 을 보여주거나 숨길수 있습니다.
+```visible``` 의 값에 따라 tooltip 을 보여주거나 숨길수 있습니다.
 ```kotlin
 @Composable
 fun BasicTooltipExample() {
@@ -41,7 +44,7 @@ fun BasicTooltipExample() {
 ```
 
 ### 툴팁 위치 및 화살표 모양 설정
-TooltipShape 및 ArrowTooltipProperties 를 사용하여 툴팁의 화살표 위치와 정렬을 커스터마이징할 수 있습니다.
+```TooltipShape``` 및 ```ArrowTooltipProperties``` 를 사용하여 툴팁의 화살표 위치와 정렬을 커스터마이징할 수 있습니다.
 
 ```kotlin
 @Composable
@@ -70,5 +73,5 @@ fun PositionedTooltipExample() {
 ```
 
 > [!NOTE]
-> ArrowPosition 과 tooltip 의 위치는 서로 반대입니다.  
-> ArrowPosition 이 Top 이라면 tooltip 은 anchor 아래에 위치하고, Left 이라면 tooltip 은 anchor 오른쪽에 위치합니다.
+> ```ArrowPosition``` 과 tooltip 의 위치는 서로 반대입니다.  
+> ```ArrowPosition``` 이 ```Top``` 이라면 tooltip 은 anchor 아래에 위치하고, ```Left``` 이라면 tooltip 은 anchor 오른쪽에 위치합니다.
