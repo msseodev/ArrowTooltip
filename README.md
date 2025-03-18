@@ -1,3 +1,5 @@
+# ArrowTooltip
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## 주요 기능
 - 간편한 Composable 함수: ArrowTooltip Composable 함수를 사용하여 툴팁을 원하는 UI 요소에 쉽게 추가할 수 있습니다.
@@ -8,7 +10,7 @@
 
 ```kotlin
 dependencies {
-    implementation("io.github.msseodev:arrowtooltip:0.0.1")
+    implementation("io.github.msseodev:arrowtooltip:0.0.2")
 }
 ```
 
